@@ -5,17 +5,21 @@ import 'package:ticketbooking/widgets/thick_container.dart';
 import 'package:gap/gap.dart';
 
 class TiketView extends StatelessWidget {
-  const TiketView({super.key});
+  final Map<String, dynamic> ticket;
+  const TiketView({
+    super.key,
+    required this.ticket,
+  });
 
   @override
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
 
     return SizedBox(
-      width: size.width,
+      width: size.width * 0.85,
       height: 200,
       child: Container(
-        margin: const EdgeInsets.only(left: 16),
+        margin: const EdgeInsets.only(right: 16),
         child: Column(
           children: [
             Container(
@@ -32,7 +36,7 @@ class TiketView extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "NYC",
+                        ticket['from']['code'],
                         style: Styles.headLineStyle3.copyWith(
                           color: Colors.white,
                         ),
@@ -83,7 +87,7 @@ class TiketView extends StatelessWidget {
                       const ThinkContainer(),
                       Expanded(child: Container()),
                       Text(
-                        "LDN",
+                        ticket['to']['code'],
                         style: Styles.headLineStyle3.copyWith(
                           color: Colors.white,
                         ),
@@ -97,14 +101,14 @@ class TiketView extends StatelessWidget {
                       SizedBox(
                         width: 100,
                         child: Text(
-                          "New-York",
+                          ticket['from']['name'],
                           style: Styles.headLineStyle4.copyWith(
                             color: Colors.white,
                           ),
                         ),
                       ),
                       Text(
-                        "8H 30M",
+                        ticket['flying_time'],
                         style: Styles.headLineStyle4.copyWith(
                           color: Colors.white,
                         ),
@@ -112,7 +116,7 @@ class TiketView extends StatelessWidget {
                       SizedBox(
                         width: 100,
                         child: Text(
-                          "London",
+                          ticket['to']['name'],
                           textAlign: TextAlign.end,
                           style: Styles.headLineStyle4.copyWith(
                             color: Colors.white,
@@ -182,7 +186,85 @@ class TiketView extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Styles.orangeColor,
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(21),
+                  bottomRight: Radius.circular(21),
+                ),
+              ),
+              padding: const EdgeInsets.only(
+                left: 16,
+                top: 10,
+                right: 16,
+                bottom: 16,
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            ticket['date'],
+                            style: Styles.headLineStyle3.copyWith(
+                              color: Colors.white,
+                            ),
+                          ),
+                          const Gap(5),
+                          Text(
+                            "Date",
+                            style: Styles.headLineStyle4.copyWith(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            ticket['departure_time'],
+                            style: Styles.headLineStyle3.copyWith(
+                              color: Colors.white,
+                            ),
+                          ),
+                          const Gap(5),
+                          Text(
+                            "Departure time",
+                            style: Styles.headLineStyle4.copyWith(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            ticket['number'].toString(),
+                            style: Styles.headLineStyle3.copyWith(
+                              color: Colors.white,
+                            ),
+                          ),
+                          const Gap(5),
+                          Text(
+                            "Number",
+                            style: Styles.headLineStyle4.copyWith(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),

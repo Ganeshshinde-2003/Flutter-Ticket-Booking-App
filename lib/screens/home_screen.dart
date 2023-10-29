@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ticketbooking/utils/app_info_list.dart';
 import 'package:ticketbooking/utils/app_styles.dart';
 import 'package:gap/gap.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
+import 'package:ticketbooking/utils/hotel_view.dart';
 import 'package:ticketbooking/utils/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -100,7 +102,54 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const Gap(15),
-          const TiketView()
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              children: ticketList
+                  .map(
+                    (ticket) => TiketView(ticket: ticket),
+                  )
+                  .toList(),
+            ),
+          ),
+          const Gap(15),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "Hotels",
+                  style: Styles.headLineStyle2,
+                ),
+                InkWell(
+                  onTap: () {
+                    print("HII THERE");
+                  },
+                  child: Text(
+                    "View all",
+                    style: Styles.textStyle.copyWith(
+                      color: Styles.primaryColor,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Gap(15),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              children: hotelList
+                  .map(
+                    (hotel) => HotelViewScreen(hotel: hotel),
+                  )
+                  .toList(),
+            ),
+          ),
         ],
       ),
     );
