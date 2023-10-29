@@ -35,7 +35,7 @@ class HotelViewScreen extends StatelessWidget {
         ],
       ),
       width: size.width * 0.6,
-      height: 350,
+      height: AppLayout.getHeight(350),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
