@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ticketbooking/utils/app_layout.dart';
 import 'package:ticketbooking/utils/app_styles.dart';
+import 'package:ticketbooking/widgets/layout_bulder.dart';
 import 'package:ticketbooking/widgets/thick_container.dart';
 import 'package:gap/gap.dart';
 
@@ -55,31 +56,9 @@ class TiketView extends StatelessWidget {
                           children: [
                             SizedBox(
                               height: AppLayout.getHeight(24),
-                              child: LayoutBuilder(
-                                builder: (BuildContext context,
-                                    BoxConstraints constraints) {
-                                  return Flex(
-                                    direction: Axis.horizontal,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: List.generate(
-                                      (constraints.constrainWidth() / 6)
-                                          .floor(),
-                                      (index) => SizedBox(
-                                        width: 3,
-                                        height: 1,
-                                        child: DecoratedBox(
-                                          decoration: BoxDecoration(
-                                            color: isColor == false
-                                                ? Colors.white
-                                                : Colors.grey.shade300,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  );
-                                },
+                              child: AppLayoutBuilder(
+                                isColor: isColor,
+                                sections: 6,
                               ),
                             ),
                             Center(
