@@ -14,8 +14,6 @@ class TicketScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
-
     return Scaffold(
       backgroundColor: Styles.bgColor,
       body: Stack(
