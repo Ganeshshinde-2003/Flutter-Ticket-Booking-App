@@ -3,7 +3,7 @@ import 'package:ticketbooking/screens/bottom_bar.dart';
 import 'package:ticketbooking/utils/app_styles.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); 
 }
 
 class MyApp extends StatelessWidget {

@@ -4,6 +4,7 @@ import 'package:ticketbooking/utils/app_styles.dart';
 import 'package:gap/gap.dart';
 import 'package:ticketbooking/widgets/icon_text_widget.dart';
 import 'package:ticketbooking/widgets/text_widget.dart';
+import 'package:ticketbooking/widgets/ticket_text.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -28,63 +29,9 @@ class SearchScreen extends StatelessWidget {
             ),
           ),
           Gap(AppLayout.getHeight(20)),
-          FittedBox(
-            child: Container(
-              padding: const EdgeInsets.all(3.5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(
-                  AppLayout.getHeight(50),
-                ),
-                color: const Color(0xfff4f6fd),
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    width: size.width * 0.44,
-                    padding: EdgeInsets.symmetric(
-                      vertical: AppLayout.getHeight(7),
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(
-                        left: Radius.circular(
-                          AppLayout.getHeight(50),
-                        ),
-                      ),
-                      color: Colors.white,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Airline tickets",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: size.width * 0.44,
-                    padding: EdgeInsets.symmetric(
-                      vertical: AppLayout.getHeight(7),
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(
-                        right: Radius.circular(
-                          AppLayout.getHeight(50),
-                        ),
-                      ),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Hotels",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+          const AppTicketTabs(
+            firstTab: "Airline tickets",
+            secondTan: "Hotels",
           ),
           Gap(AppLayout.getHeight(25)),
           const AppIconText(

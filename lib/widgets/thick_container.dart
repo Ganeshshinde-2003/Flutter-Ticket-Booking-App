@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ThinkContainer extends StatelessWidget {
-  const ThinkContainer({super.key});
+  final bool? isColor;
+  const ThinkContainer({
+    super.key,
+    required this.isColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +15,7 @@ class ThinkContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           width: 2.5,
-          color: Colors.white,
+          color: isColor == false ? Colors.white : const Color(0xffbaccf7),
         ),
       ),
     );

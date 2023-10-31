@@ -108,7 +108,10 @@ class HomeScreen extends StatelessWidget {
             child: Row(
               children: ticketList
                   .map(
-                    (ticket) => TiketView(ticket: ticket),
+                    (ticket) => TiketView(
+                      ticket: ticket,
+                      isColor: false,
+                    ),
                   )
                   .toList(),
             ),
