@@ -9,6 +9,18 @@ A visually appealing flight ticket booking app UI prototype built using Flutter.
 3. 🎫 Tickets Screen: Displays booked tickets and reservation details (simulated data).
 4. 👤 Profile Screen: Allows users to manage their personal information and view booking history.
 
+## Screenshot 📷
+
+![t1](https://github.com/Ganeshshinde-2003/Flutter-Ticket-Booking-App/assets/115361691/2486011b-fbd1-4eb6-b1d8-1e83031f3696)
+
+![t2](https://github.com/Ganeshshinde-2003/Flutter-Ticket-Booking-App/assets/115361691/ba109d28-5dcd-41fc-b071-177e92f149ff)
+
+![t3](https://github.com/Ganeshshinde-2003/Flutter-Ticket-Booking-App/assets/115361691/3444afe9-48d5-42cb-b18a-ff73ee4197d8)
+
+![t4](https://github.com/Ganeshshinde-2003/Flutter-Ticket-Booking-App/assets/115361691/1573462a-d6a3-4d3b-baf4-e8791b4ade97)
+
+![t5](https://github.com/Ganeshshinde-2003/Flutter-Ticket-Booking-App/assets/115361691/6a829ce2-9630-406b-80f3-f8c2d3e73210)
+
 ## Features 🚀
 
 - Eye-catching UI design with a focus on user experience.
