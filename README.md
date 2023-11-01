@@ -38,4 +38,4 @@ We welcome suggestions for improving the UI design and enhancing the user experi
 
 ## Contact 📧
 
-For any inquiries or feedback, please contact us at [your-email@example.com](mailto:sindheganesh2004@example.com).
+For any inquiries or feedback, please contact us at [my-gmail](mailto:sindheganesh2004@gmail.com).
