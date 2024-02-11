@@ -20,7 +20,7 @@ class TiketView extends StatelessWidget {
 
     return SizedBox(
       width: size.width * 0.85,
-      height: AppLayout.getHeight(169),
+      height: AppLayout.getHeight(200),
       child: Container(
         margin: EdgeInsets.only(right: AppLayout.getHeight(16)),
         child: Column(
